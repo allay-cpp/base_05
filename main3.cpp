@@ -8,7 +8,7 @@ private:
 	std::string name;
 
 public:
-	Shape(int setSides, std::string setName = "Фигура") : sides(setSides), name(setName) {}
+	Shape(int setSides = 0, std::string setName = "Фигура") : sides(setSides), name(setName) {}
 
 	virtual bool check()
 	{
@@ -212,7 +212,7 @@ void print_info(Shape* shape) { shape->print_info(); }
 
 int main(int argc, char** argv)
 {
-	Shape shape1(0);
+	Shape shape1;
 	print_info(&shape1);
 
 	Triangle shape2(10, 20, 30, 50, 60, 70);
