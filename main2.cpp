@@ -11,13 +11,10 @@ public:
 
 	virtual void print_info()
 	{
-		std::cout << get_name() << ": " << '\n';
+		std::cout << name << ": " << '\n';
 	}
 
 	virtual ~Shape() = default;
-
-protected:
-	std::string get_name() { return name; }
 };
 
 class Triangle : public Shape
@@ -41,13 +38,6 @@ public:
 		std::cout << "Углы: A=" << A << " B=" << B << " C=" << C << '\n';
 		std::cout << std::endl;
 	}
-protected:
-	int get_a() { return a; }
-	int get_b() { return b; }
-	int get_c() { return c; }
-	int get_A() { return A; }
-	int get_B() { return B; }
-	int get_C() { return C; }
 };
 
 class Right_angled_tri : public Triangle
@@ -90,19 +80,10 @@ public:
 	void print_info()
 	{
 		Shape::print_info();
-		std::cout << "Стороны: a=" << get_a() << " b=" << get_b() << " c=" << get_c() << " d=" << get_d() << '\n';
-		std::cout << "Углы: A=" << get_A() << " B=" << get_B() << " C=" << get_C() << " D=" << get_D() << '\n';
+		std::cout << "Стороны: a=" << a << " b=" << b << " c=" << c << " d=" << d << '\n';
+		std::cout << "Углы: A=" << A << " B=" << B << " C=" << C << " D=" << D << '\n';
 		std::cout << std::endl;
 	}
-private:
-	int get_a() { return a; }
-	int get_b() { return b; }
-	int get_c() { return c; }
-	int get_d() { return d; }
-	int get_A() { return A; }
-	int get_B() { return B; }
-	int get_C() { return C; }
-	int get_D() { return D; }
 };
 
 class Rectangle : public Quadrilateral
